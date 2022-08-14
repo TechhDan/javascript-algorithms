@@ -13,7 +13,7 @@ function recursiveBinarySearch(array, search) {
 		if (search === array[middle]) {
 			return true;
 		} else if (search > array[middle]) {
-			return recursiveBinarySearch(array.splice(middle + 1, array.length - 1), search);
+			return recursiveBinarySearch(array.splice(middle + 1), search);
 		} else {
 			return recursiveBinarySearch(array.splice(0, middle), search);
 		}
@@ -21,8 +21,8 @@ function recursiveBinarySearch(array, search) {
 }
 
 let result = recursiveBinarySearch(
-	[1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-	12
+	[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+	1
 );
 
 console.log(result);
